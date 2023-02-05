@@ -1,6 +1,8 @@
 import './App.css';
 import Expense from './components/Expenses/Expense';
 import Card from '../src/components/UI/Card';
+import NewExpense from './components/NewExpenses/New Expense';
+
 function App() {
   const  expenses =[
     {date: new Date(2023,1,31),title:'Toilet Paper', amount:12.90},
@@ -12,6 +14,7 @@ function App() {
   return (
     <Card>
       <h2 className='App'>My Expense Tracker </h2>
+      <NewExpense />
       <Expense expenses={expenses}/>
     </Card>
   );
