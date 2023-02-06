@@ -6,6 +6,20 @@ function NewExpenseForm(){
     const [enteredDate, setEnteredDate] = useState('');
     const[enteredAmount, setEnteredAmount] = useState('');
 
+    //using one state to listen for Data change
+
+    //    const [userInput, setUserInput] = useState({
+    //         enteredTitle: '',
+    //         enteredDate: '',
+    //         enteredAmount: ''
+    //     });
+        
+    // function titleChangeHandler(event){
+    //     setUserInput({
+    //         ...userInput,
+    //         enteredTitle: event.target.value
+    //     });
+    // }
     function titleChangeHandler(event){
         setEnteredTitle(event.target.value);
     }
