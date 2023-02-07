@@ -1,12 +1,20 @@
 import React from 'react';
+import ExpenseFilter from './ExpenseFilter';
 
 import ExpenseItem from "./ExpenseItem";
 import "./Expense.css";
 import Card from "../UI/Card";
 
 function Expense(props){
+
+    function selectedYear(theYear){
+      console.log('Hona Howard');
+      console.log(theYear);
+    }
     return(
-    <Card className="expense">
+      <div>
+        <ExpenseFilter onSelectingYear={selectedYear}/>
+        <Card className="expense">
       <ExpenseItem 
         date={props.expenses[0].date}
         title={props.expenses[0].title}
@@ -33,6 +41,8 @@ function Expense(props){
         amount={props.expenses[4].amount}
       ></ExpenseItem>
     </Card>
+      </div>
+    
     );
 }
 
