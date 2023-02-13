@@ -32,7 +32,7 @@ function NewExpenseForm(props){
         setEnteredTitle(event.target.value);
     }
     function dateChangeHandler(event){
-        setEnteredDate(event.target.value);
+        setEnteredDate(new Date(event.target.value));
     }
     function amountChangeHandler(event){
         setEnteredAmount(event.target.value);
@@ -60,7 +60,7 @@ function NewExpenseForm(props){
                 </div>
                 <div className="new-expense__control">
                     <label>Date</label>
-                    <input type='date' min='2019-01-01' step='2025-12-31' onChange={dateChangeHandler} value={enteredDate} ></input>
+                    <input type='date' min='2013-01-01' step='2025-12-31' onChange={dateChangeHandler} value={enteredDate} ></input>
                 </div>
                 <div className="new-expense__control">
                     <label>Amount</label>
