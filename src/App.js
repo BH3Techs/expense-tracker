@@ -12,7 +12,7 @@ function App() {
     {id:2,date: new Date(2022,1,31),title:'Insurance', amount:70.02},
     {id:3,date: new Date(2023,1,31),title:'Transport', amount:60.50},
     {id:4,date: new Date(2021,2,1),title:'Lunch', amount:30.50},
-    {id:5,date: new Date(2020,2,2),title:'School Fees', amount:410},
+    {id:5,date: new Date(2021,2,2),title:'School Fees', amount:410},
   ];
 
   const [expensesList,setExpensesList] = useState(initialList);
