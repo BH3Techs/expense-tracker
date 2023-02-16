@@ -3,7 +3,7 @@ import './NewExpenseForm.css';
 
 function NewExpenseForm(props){
     const [enteredTitle, setEnteredTitle] = useState('');
-    const [enteredDate, setEnteredDate] = useState('');
+    const [enteredDate, setEnteredDate] = useState('2020-01-02');
     const[enteredAmount, setEnteredAmount] = useState('');
 
     //using one state to listen for Data change
@@ -32,7 +32,8 @@ function NewExpenseForm(props){
         setEnteredTitle(event.target.value);
     }
     function dateChangeHandler(event){
-        setEnteredDate(new Date(event.target.value));
+        const date = new Date(event.target.value);
+        setEnteredDate(date);
     }
     function amountChangeHandler(event){
         setEnteredAmount(event.target.value);
@@ -60,7 +61,7 @@ function NewExpenseForm(props){
                 </div>
                 <div className="new-expense__control">
                     <label>Date</label>
-                    <input type='date' min='2013-01-01' step='2025-12-31' onChange={dateChangeHandler} value={enteredDate} ></input>
+                    <input type='date' min='01-01-2020' onChange={dateChangeHandler} value={enteredDate} ></input>
                 </div>
                 <div className="new-expense__control">
                     <label>Amount</label>
@@ -68,7 +69,7 @@ function NewExpenseForm(props){
                 </div>
             </div>
             <div className="new-expense__actions">
-                <button>Cancel</button>
+                <button onClick={props.onCancel}>Cancel</button>
                 <button>Add Expense</button>
             </div>
         </form>
